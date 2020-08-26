@@ -1,0 +1,190 @@
+.booking {
+  padding: 15rem 5rem;
+  background-image: linear-gradient(to right, #32ccbde7, #90f7edd3);
+
+  // Book
+  .book {
+    background-image: url(../assets/img/nat-10.jpg);
+    background-size: cover;
+    height: 57rem;
+
+    // Form
+    form {
+      background-color: #f7f7ffee;
+      height: 100%;
+      width: 55%;
+      clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+      padding: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      // Title
+      .title {
+        text-align: center;
+        margin-bottom: 8rem;
+
+        h2 {
+          font: 700 3rem 'Lemonada', cursive;
+          text-align: center;
+          text-transform: uppercase;
+          display: inline-block;
+          background-image: linear-gradient(to right, #32ccbde7, #90f7edd3);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          transition: 0.2s;
+
+          // Hover
+          &:hover {
+            transform: skew(5deg, 5deg) scale(1.1);
+            text-shadow: 2px 2px 1px #32ccbde7;
+          }
+        }
+      }
+
+      .title + input {
+        margin-top: -6rem;
+      }
+
+      // Input
+      input[type='name'],
+      input[type='email'] {
+        transition: 0.1s;
+        all: unset;
+        font: 700 1.2rem 'Lemonada', cursive;
+        letter-spacing: 0.6px;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: #fffffffd;
+        border-bottom: 2px solid #000;
+        transition: 0.1s;
+        width: 60%;
+        margin-bottom: 0.5rem;
+        color: black;
+
+        // Focus
+        &:focus {
+          border-bottom: 2px solid orange;
+          box-shadow: 3px 3px 15px #0000003b;
+        }
+
+        // Valid
+        &:valid {
+          border-bottom: 2px solid #32ccbde7;
+        }
+
+        // Placeholder
+        &::placeholder {
+          color: #bbb;
+
+          &:focus {
+            opacity: 0;
+          }
+        }
+      }
+
+      // Label
+      label[for='name'],
+      label[for='email'] {
+        margin-bottom: 3rem;
+        font: 700 1.2rem 'Lemonada', cursive;
+        align-self: flex-start;
+        transform: translate(-1rem, -4rem);
+      }
+
+      // hide label
+      input:placeholder-shown + label {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      // Checkbox
+      .check {
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 992px) {
+          grid-gap: 3rem;
+          grid-template-columns: 1fr;
+        }
+
+        .check-box {
+          // input
+          input {
+            margin-right: 1rem;
+            cursor: pointer;
+            opacity: 0;
+
+            &:checked ~ label span::before {
+              opacity: 1;
+            }
+          }
+
+          // Label
+          label {
+            font: 700 1.1rem 'Lemonada', cursive;
+            cursor: pointer;
+            position: relative;
+          }
+
+          // Span
+          span {
+            position: absolute;
+            top: -9px;
+            left: -34px;
+            height: 3.5rem;
+            width: 3.5rem;
+            border: 6px solid #90f7edd3;
+            border-radius: 50%;
+            margin-left: -1rem;
+
+            // Before
+            &::before {
+              content: '';
+              position: absolute;
+              top: 4px;
+              left: 4px;
+              height: 1.5rem;
+              width: 1.5rem;
+              border-radius: 50%;
+              background-color: #32ccbde7;
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      // Btn
+      a {
+        all: unset;
+        font: 700 1.3rem 'Lemonada', cursive;
+        color: #32ccbde7;
+        border-bottom: 3px solid #90f7edd3;
+        cursor: pointer;
+        padding: 10px;
+        display: inline-block;
+        transition: 0.1s;
+        transform: translateY(2.5rem);
+
+        // Hover
+        &:hover {
+          background-color: #90f7edd3;
+          box-shadow: 0 1rem 2rem #0000001e;
+        }
+
+        // Active
+        &:active {
+          box-shadow: 0 0.5rem 1rem #0000001e;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // --------------------------- Icons --------------------------
+        link(rel="stylesheet", href="./assets/icon/styles.css")
+        // --------------------------- SCSS --------------------------
+        link(rel="stylesheet", href="./scss/main.scss")
+        title Outdoors
+
+
+    body
+        .container
+
+            // --------------------------- Navigation --------------------------
+            .navigation
+
+                input(type="checkbox" id="nav-toggle")
+                label(for="nav-toggle")
+                .bg: img(src="./assets/icon/menu.svg" width=`35px`)
+                nav
+                    ul 
+                        li: a(href="#") About natous
+                        li: a(href="#") Your benfits
+                        li: a(href="#") Popular
+                        li: a(href="#") stories
+                        li: a(href="#") Book now
+
+
+            // ---------------------------- Header ------------------------------
+            header
+                .logo
+                    img(src="./assets/img/logo-white.png")
+
+                .title
+                    h1 outdoors
+                    p is where life happens
+
+                a(href="#tours") Discover our tours
+
+
+            // ----------------------------- About ----------------------------
+            .about
+                .title
+                    h2 Exciting tours for adventurous people
+
+                .info
+                    .text 
+                        h1 You're going to fall in love with nature
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consectetur aut illum cumque, asperiores rem, qui placeat maxime facere, aperiam quibusdam. Dicta labore nihil, voluptatibus eos sapiente unde beatae facilis?
+                        h1 Live adventures like you have never before
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aspernatur numquam similique cupiditate amet delectus accusantium reprehenderit quod commodi praesentium.
+                        a(href="#") Learn more &rarr;
+
+                    .composition
+                        img.img1(src="./assets/img/nat-1-large.jpg")
+                        img.img2(src="./assets/img/nat-2-large.jpg")
+                        img.img3(src="./assets/img/nat-3-large.jpg")
+
+
+            // ----------------------------- Features ----------------------------
+            .features
+
+                .grid
+
+                    .feature-box
+                            i.icon-basic-world
+                            h3 Explore the world
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, corrupti.
+
+                    .feature-box
+                            i.icon-basic-compass
+                            h3 meet nautre
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, corrupti.
+
+                    .feature-box
+                            i.icon-basic-map
+                            h3 find your way
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, corrupti.
+
+                    .feature-box
+                            i.icon-basic-heart
+                            h3 live a healthier
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, corrupti.
+
+
+            // ----------------------------- Tours ----------------------------
+            .tours#tours
+
+                .title
+                    h2 Most popular tours
+
+                .grid 
+
+                    .card-box 
+
+                        .front.side 
+                            .picture.pic1 
+                            h4: span.span1 The sea explore
+                            ul
+                                li 3 day tours
+                                li Up to 30 people 
+                                li 2 tours guides
+                                li sleep in cozy hotels
+                                li Difficulty: easy
+
+                        .back.side 
+                            span Only
+                            h2 $297
+                            a(href="#popup") Book now
+
+
+                    .card-box 
+
+                        .front.side 
+                            .picture.pic2 
+                            h4: span.span2 The forest hiker
+                            ul
+                                li 7 day tours
+                                li Up to 40 people 
+                                li 6 tours guides
+                                li sleep in provided tents
+                                li Difficulty: medium
+
+                        .back.side 
+                            span Only
+                            h2 $390
+                            a(href="#popup") Book now
+
+
+
+                    .card-box 
+
+                        .front.side 
+                            .picture.pic3 
+                            h4: span.span3 The snow adventurer
+                            ul
+                                li 12 day tours
+                                li Up to 20 people 
+                                li 14 tours guides
+                                li sleep in provided tents
+                                li Difficulty: hard
+
+                        .back.side 
+                            span Only
+                            h2 $250
+                            a(href="#popup") Book now
+
+
+            // ----------------------------- Stories ----------------------------
+            .stories
+
+                .title
+                    h2 We make people genuinely happy
+
+                .grid
+
+                    .story 
+                        .shape.shape1 
+                        .text
+                            h2 I had the best week ever with my family 
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta eos, incidunt blanditiis velit porro quia eveniet consequatur nulla, a repellendus dignissimos iure eum totam quae iste, obcaecati voluptates tenetur recusandae tempora tempore ratione. Eligendi.
+
+
+                    .story 
+                        .shape.shape2
+                        .text
+                            h2 Wow my life is completly diffrent now
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta eos, incidunt blanditiis velit porro quia eveniet consequatur nulla, a repellendus dignissimos iure eum totam quae iste, obcaecati voluptates tenetur recusandae tempora tempore ratione. Eligendi.
+
+
+            // ----------------------------- Booking ----------------------------
+            .booking
+            
+                .book
+
+                    form
+
+                        .title
+                            h2 Start bookin now
+
+                        input(type="name" placeholder='Full Name' id="name" required)
+                        label(for="name") Full Name
+
+                        input(type="email" placeholder='Email' id="email" required)
+                        label(for="email") Email
+
+                        .check
+
+                            .check-box
+                                input(type="radio" id="small" name="size")
+                                label(for="small")
+                                    span
+                                    |Small tour group
+
+                            .check-box
+                                input(type="radio" id="large" name="size")
+                                label(for="large")
+                                    span
+                                    |Large tour group
+
+                        a(href="#") Learn more &rarr;
+
+
+            // ----------------------------- Footer ----------------------------
+            footer
+
+                nav 
+                    ul
+                        li: a(href="#") Company
+                        li: a(href="#") Contact us
+                        li: a(href="#") Carrers
+                        li: a(href="#") Privacy policy
+                        li: a(href="#") Terms
+
+                img(srcset="./assets/img/logo-green-1x.png")
+                
+                .copyright  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis architecto, iste voluptatem aliquid iusto officiis qui, maiores veritatis est neque quisquam praesentium deserunt? Totam autem dolorum eaque enim maxime!
+
+        // ----------------------------- Popup ----------------------------
+        .popup#popup
+
+            .popup-content
+
+                a.close-btn(href="#tours") &#x2718;
+
+                .img-box
+                    img(src=`./assets/img/nat-8.jpg`)
+                    img(src=`./assets/img/nat-9.jpg`)
+
+                .details
+                    h2 Start booking now
+                    h3 Important &ndash; Please read these terms before
+                    .paragraph
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eos inventore quod perferendis nisi autem culpa minus voluptates, vel quam obcaecati, accusantium eveniet! Natus eligendi eius soluta. Esse alias consequuntur est minus nihil rerum perspiciatis reprehenderit sint? Vel corrupti commodi consequatur error minima dicta modi iste eum harum? In, minus!
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eos inventore quod perferendis nisi autem culpa minus voluptates, vel quam obcaecati, accusantium eveniet! Natus eligendi eius soluta. Esse alias consequuntur est minus nihil rerum perspiciatis reprehenderit sint? Vel corrupti commodi consequatur error minima dicta modi iste eum harum? In, minus!
+                    a(href="#") Book now
+
+
+
+
+        // ----------------------------- Js ----------------------------
+        script(src="./main.js")

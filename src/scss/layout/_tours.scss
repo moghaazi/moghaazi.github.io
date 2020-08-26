@@ -1,0 +1,191 @@
+.tours {
+  background-color: #f7f7f7;
+  padding: 25rem 5rem 10rem 5rem;
+  margin-top: -30vh;
+
+  // Title
+  .title {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    h2 {
+      font: 700 3.5rem 'Lemonada', cursive;
+      text-align: center;
+      text-transform: uppercase;
+      display: inline-block;
+      background-image: linear-gradient(to right, #32ccbde7, #90f7edd3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: 0.2s;
+
+      // Hover
+      &:hover {
+        transform: skew(5deg, 5deg) scale(1.1);
+        text-shadow: 2px 2px 1px #32ccbde7;
+      }
+    }
+  }
+
+  // Grid Card
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    // xm 350px
+    @include rwd(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    // sm 576px
+    @include rwd(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // sm 576px
+    @include rwd(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Card Box
+    .card-box {
+      perspective: 150rem;
+      position: relative;
+      height: 50rem;
+
+      // Side
+      .side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50rem;
+        transition: 0.5s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      // Front Side
+      .front {
+        background-color: #f7f7f7;
+        box-shadow: 2px 2px 15px #00000046;
+
+        // Images
+        .picture {
+          background-size: cover;
+          height: 23rem;
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        }
+
+        .pic1 {
+          background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
+            url(../assets/img/nat-5.jpg);
+          background-blend-mode: screen;
+        }
+
+        .pic2 {
+          background-image: linear-gradient(to right bottom, #32ccbde7, #90f7edd3),
+            url(../assets/img/nat-6.jpg);
+          background-blend-mode: screen;
+        }
+
+        .pic3 {
+          background-image: linear-gradient(to right bottom, #0093e9, #80d0c7),
+            url(../assets/img/nat-7.jpg);
+          background-blend-mode: screen;
+        }
+
+        // Heading
+        h4 {
+          font: 300 2.5rem 'Lemonada', cursive;
+          text-transform: uppercase;
+          color: #ffff;
+          position: absolute;
+          top: 12rem;
+          right: 2rem;
+          text-align: right;
+          width: 75%;
+
+          span {
+            padding: 1rem 1.5rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+          }
+
+          .span1 {
+            background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+          }
+
+          .span2 {
+            background-image: linear-gradient(to right bottom, #32ccbde7, #90f7edd3);
+          }
+
+          .span3 {
+            background-image: linear-gradient(to right bottom, #0093e9, #80d0c7);
+          }
+        }
+
+        // Details
+        ul {
+          width: 80%;
+          margin: 2.5rem auto 0 auto;
+
+          li {
+            list-style-type: none;
+            text-align: center;
+            font: 1.5rem 'Lemonada', cursive;
+            letter-spacing: 0.2px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+          }
+        }
+      }
+
+      // Back Side
+      .back {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        span {
+          font: 1.8rem 'Lemonada', cursive;
+          color: white;
+          margin: 3rem 0;
+        }
+
+        h2 {
+          font: 4.5rem 'Lemonada', cursive;
+          color: white;
+        }
+
+        a {
+          all: unset;
+          font: 2rem 'Lemonada', cursive;
+          border-radius: 50px;
+          padding: 1rem 2rem;
+          cursor: pointer;
+          background-color: #fff;
+          color: #000;
+          position: absolute;
+          bottom: 7rem;
+        }
+      }
+
+      // Front Hover
+      &:hover .front {
+        transform: rotateY(-180deg);
+      }
+
+      // Back Hover
+      &:hover .back {
+        transform: rotateY(0);
+      }
+    }
+  }
+}

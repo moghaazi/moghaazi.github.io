@@ -1,0 +1,60 @@
+footer {
+  padding: 30rem 1.5rem 6rem 1.5rem;
+  background-color: #212121;
+  position: relative;
+  display: grid;
+  grid-gap: 10rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 992px) {
+    grid-gap: 5rem;
+
+    grid-template-columns: 1fr;
+  }
+
+  // Nav
+  nav {
+    border-top: 1px solid #bbb;
+    padding-top: 2rem;
+
+    li {
+      all: unset;
+      margin: 1rem;
+
+      // Link
+      a {
+        all: unset;
+        font: 1.1rem 'Lemonada', cursive;
+        letter-spacing: 0.3px;
+        color: #f7f7f7;
+        cursor: pointer;
+        transition: 0.2s;
+        text-transform: uppercase;
+        display: inline-block;
+
+        // Hover
+        &:hover {
+          color: #32ccbde7;
+          transform: rotate(4deg) scale(1.1);
+          text-shadow: 1.5px 1.5px 5px #32ccbde7;
+        }
+      }
+    }
+  }
+
+  // Logo
+  img {
+    position: absolute;
+    top: 5rem;
+    left: 42%;
+  }
+
+  // CopyRight
+  .copyright {
+    border-top: 1px solid #bbb;
+    padding-top: 2rem;
+    color: #f7f7f7;
+    font: 1.3em 'Lemonada', cursive;
+    letter-spacing: 0.3px;
+  }
+}

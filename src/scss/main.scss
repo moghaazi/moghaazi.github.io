@@ -1,0 +1,67 @@
+// --------------------------- Import ----------------------------------------
+@import './layout/header'; // header
+@import './layout/about'; // about
+@import './layout/features'; // features
+@import './layout/tours'; // tours
+@import './layout/stories'; // stories
+@import './layout/booking'; // booking
+@import './layout/footer'; // footer
+@import './layout/nav'; // nav
+@import './layout/popup'; // popup
+@import './layout/assets/breakPoints'; // breakPoints
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap');
+
+// --------------------------- Global --------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  color: #777777;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 1rem;
+
+  @media (max-width: 576px) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: #222;
+  color: #eee;
+}
+
+// Custom Scroll Bar
+// For Firefox
+:root {
+  scrollbar-color: #666 #222 !important;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 5rem;
+}
